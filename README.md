@@ -1,2 +1,2 @@
-# coding-challenge
+# CodingChallenge
 Paymentsense coding challenge
