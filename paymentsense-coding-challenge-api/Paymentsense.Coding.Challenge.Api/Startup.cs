@@ -39,6 +39,8 @@ namespace Paymentsense.Coding.Challenge.Api
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseMiddleware(typeof(ErrorHandlingMiddleware));
+
             app.UseHttpsRedirection();
 
             app.UseCors("PaymentsenseCodingChallengeOriginPolicy");
