@@ -1,0 +1,31 @@
+<div class="root">
+  <h2 class="header">Countries</h2>
+  <div class="countries">
+      <ul class="list">
+        <li *ngFor="let country of pageOfCountries"
+          [class.selected]="country === selectedCountry"
+          (click)="onSelect(country)">
+          <span class="badge">
+            <p class="label">
+              {{country.name}}
+            </p>
+            <img class="image" src="{{country.flagUri}}" />
+          </span> 
+        </li>
+      </ul>
+      <div class="detail" *ngIf="selectedCountry">
+        <ul>
+          <li>
+            <h2>{{selectedCountry.name | uppercase}}</h2>
+          </li>
+          <li>population: {{selectedCountry.population}}</li>
+          <li>timezones: {{selectedCountry.timezones}}</li>
+          <li>currencies: {{selectedCountry.currencies}}</li>
+          <li>capital: {{selectedCountry.capitalCity}}</li>
+          <li>bordering: {{selectedCountry.borderingCountries}}</li>
+        </ul>
+      </div>
+  </div>
+
+  <jw-pagination [pageSize]="numberOfCountriesOnPage" [items]="countries" (changePage)="onChangePage($event)"></jw-pagination>
+</div>

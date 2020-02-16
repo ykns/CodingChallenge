@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve --ssl --ssl-key ./ssl/server.key --ssl-cert ./ssl/server.crt",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -25,7 +25,9 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.25",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "angular-svg-icon": "^8.0.0",
     "core-js": "^2.5.4",
+    "jw-angular-pagination": "^1.1.0",
     "rxjs": "~6.5.2",
     "tslib": "^1.9.0",
     "zone.js": "~0.9.1"
