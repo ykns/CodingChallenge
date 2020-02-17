@@ -7,6 +7,8 @@ using Paymentsense.Coding.Challenge.Api.Services;
 
 namespace Paymentsense.Coding.Challenge.Api
 {
+
+    // TODO consider secure API https://auth0.com/blog/how-to-build-and-secure-web-apis-with-aspnet-core-3/
     public class Startup
     {
         public Startup(IConfiguration configuration)
@@ -46,6 +48,8 @@ namespace Paymentsense.Coding.Challenge.Api
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseHsts();
 
             app.UseMiddleware(typeof(ErrorHandlingMiddleware));
 
